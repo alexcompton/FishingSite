@@ -95,15 +95,16 @@ jQuery(document).ready(function($) {
             $(".conditions").append('<img id="weatherIcon" src="http://icons.wxug.com/i/c/k/'+icon+'.gif" alt="icon">');
             $("#nowcast").append('<br><p>'+nowcast+'</p><br>');
 
-            if(feelslike > 85){
+            if(feelslike > 70){
                 $(".hydrate").removeClass("inActivePrecaution").addClass("activePrecaution");
             }
 
-            if(uv > 5){
+            if(uv > 4){
                 $(".sunscreen").removeClass("inActivePrecaution").addClass("activePrecaution");
             }
 
-            if(!(conditions == "Clear" || conditions == "Patches of Fog" || conditions == "Shallow Fog" || conditions == "Partial Fog" || conditions == "Overcast" || conditions == "Partly Cloudy" || conditions == "Mostly Cloudy" || conditions == "Scattered Clouds")){
+            if(!(conditions == "Clear" || conditions == "Patches of Fog" || conditions == "Shallow Fog" || conditions == "Partial Fog" 
+                || conditions == "Overcast" || conditions == "Partly Cloudy" || conditions == "Mostly Cloudy" || conditions == "Scattered Clouds")){
                 $(".breezy").removeClass("inActivePrecaution").addClass("activePrecaution");
             }
 
